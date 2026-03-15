@@ -4,12 +4,14 @@ This repository reproduces core claims from the paper under a strict total compu
 
 ## Scope
 
-We target two claims that are feasible within budget:
+We target three claims that are feasible within budget:
 
 1. **Gradient suppression through the LM head**
    - Estimate how much token-level logit gradient norm lies outside the LM-head reachable subspace.
 2. **Optimization gets harder as vocabulary grows** (SpamLang-style synthetic setup)
    - Keep hidden size fixed and increase vocabulary; observe training loss trends.
+3. **Higher effective LM-head rank improves optimization**
+   - Hold hidden size and task fixed, vary output-head rank, and measure loss/accuracy trends over multiple seeds.
 
 ## Quickstart
 
@@ -32,11 +34,21 @@ Use `quick` mode for a short smoke run:
 bash scripts/run_repro.sh quick
 ```
 
+Run larger-scale rank ablation:
+
+```bash
+python3 scripts/exp_rank_ablation_large.py \
+  --output artifacts/rank_ablation_large.json \
+  --plot artifacts/plots/rank_ablation_large.png
+```
+
 Artifacts:
 
 - `artifacts/gradient_suppression.json`
 - `artifacts/spamlang_bottleneck.json`
 - `artifacts/plots/spamlang_bottleneck.png`
+- `artifacts/rank_ablation_large.json`
+- `artifacts/plots/rank_ablation_large.png`
 
 ## Flywheel Graph
 
@@ -45,7 +57,7 @@ Node IDs are in `flywheel/graph_manifest.json`.
 Workflow:
 
 1. Acquire compute lease with hard cap <= 950 cents.
-2. Run `make all`.
+2. Run `make all` and optionally `make rank_ablation`.
 3. Publish artifacts to empirical nodes.
 4. Commit nodes with result summaries and repo commit SHA.
 
