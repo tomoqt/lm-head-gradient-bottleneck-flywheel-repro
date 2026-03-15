@@ -4,6 +4,7 @@ set -euo pipefail
 MODE="${1:-full}"
 
 python3 -m pip install -r requirements.txt
+mkdir -p artifacts artifacts/plots
 
 if [[ "$MODE" == "quick" ]]; then
   python3 scripts/exp_gradient_suppression.py \

@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import argparse
+import os
 import time
 from dataclasses import dataclass
 from typing import Dict, List, Tuple
@@ -82,6 +83,9 @@ def run_trial(cfg: TrainConfig, device: str, seed: int) -> Dict:
 
 
 def plot_curves(results: Dict[int, Dict], out_path: str) -> None:
+    out_dir = os.path.dirname(out_path)
+    if out_dir:
+        os.makedirs(out_dir, exist_ok=True)
     plt.figure(figsize=(8, 5))
     for vocab_size, payload in results.items():
         curve = payload["loss_curve"]
