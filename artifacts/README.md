@@ -24,4 +24,4 @@ Generated on 2026-03-15 using Flywheel-provisioned compute (`modal::modal_a10g`,
 - `rank_ablation_large.log`
 - `plots/rank_ablation_large.png`
 
-Total Flywheel cumulative spend across runs in this graph: **14 cents**.
+Total Flywheel cumulative spend across runs in this graph: **9 cents**.
