@@ -1,0 +1,45 @@
+{
+  "paper": "arXiv:2603.10145",
+  "experiment": "spamlang_vocab_scaling",
+  "config": {
+    "vocab_sizes": [
+      256,
+      512,
+      1024
+    ],
+    "hidden_dim": 96,
+    "seq_len": 32,
+    "batch_size": 128,
+    "steps": 700,
+    "lr": 0.002
+  },
+  "results_by_vocab": [
+    {
+      "vocab_size": 256,
+      "final_loss": 2.0631940364837646,
+      "tail_mean_loss": 2.076386991568974
+    },
+    {
+      "vocab_size": 512,
+      "final_loss": 2.28483247756958,
+      "tail_mean_loss": 2.295675219808306
+    },
+    {
+      "vocab_size": 1024,
+      "final_loss": 2.537966728210449,
+      "tail_mean_loss": 2.5116954939705987
+    }
+  ],
+  "notes": [
+    "This targets the paper's claim that optimization worsens as vocabulary grows at fixed hidden size.",
+    "Trend of interest: higher final loss for larger vocabulary under equal compute."
+  ],
+  "plot": "artifacts/plots/spamlang_bottleneck.png",
+  "run_meta": {
+    "started_at_unix": 1773533369.42041,
+    "ended_at_unix": 1773533374.8830433,
+    "duration_sec": 5.462633371353149,
+    "device": "cuda",
+    "seed": 11
+  }
+}

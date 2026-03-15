@@ -1,0 +1,38 @@
+{
+  "paper": "arXiv:2603.10145",
+  "experiment": "gradient_suppression",
+  "model": "gpt2",
+  "config": {
+    "max_batches": 24,
+    "batch_size": 4,
+    "seq_len": 96,
+    "sample_tokens_per_batch": 96
+  },
+  "results": {
+    "suppressed_norm_ratio": {
+      "mean": 0.9943075776100159,
+      "std": 0.0018212719587609172,
+      "p50": 0.9944714903831482,
+      "p90": 0.996471643447876,
+      "count": 2039
+    },
+    "kept_norm_ratio": {
+      "mean": 0.10518259555101395,
+      "std": 0.016900083050131798,
+      "p50": 0.1050066351890564,
+      "p90": 0.12543052434921265,
+      "count": 2039
+    }
+  },
+  "notes": [
+    "Suppressed ratio is ||g - QQ^T g|| / ||g|| where Q spans col(W_out).",
+    "If suppression is high, gradient flow through the output head discards most logit-gradient norm."
+  ],
+  "run_meta": {
+    "started_at_unix": 1773533315.9510348,
+    "ended_at_unix": 1773533323.2943287,
+    "duration_sec": 7.343293905258179,
+    "device": "cuda",
+    "seed": 7
+  }
+}
