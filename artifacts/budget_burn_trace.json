@@ -1,0 +1,38 @@
+{
+  "campaign": "Budget exhaustion run",
+  "paper": "arXiv:2603.10145",
+  "root_node_id": "8087ccba-da33-503c-a49b-ded901f15d12",
+  "empirical_node_id": "496a6cf0-7be5-5da2-a130-659eebb5f640",
+  "budget": {
+    "budget_grant_id": "92ce256f-cf56-5f4a-8deb-6ae7359ea4c5",
+    "hard_cap_cents": 950,
+    "spent_cents": 950,
+    "remaining_cents": 0,
+    "status": "exhausted"
+  },
+  "high_cost_lease": {
+    "lease_id": "d413ab1d-e782-455b-ac6d-50425f23d930",
+    "provider": "vastai",
+    "offer_id": "vastai::vast_8x_b200_180gb",
+    "region": "Ohio, US",
+    "price_cents_per_hour": 2251,
+    "total_charged_cents": 941,
+    "release_reason": "spending_cap_reached",
+    "released_at": "2026-03-15T01:13:56.533788+00:00"
+  },
+  "observed_spend_points_cents": [
+    9,
+    61,
+    101,
+    175,
+    377,
+    760,
+    924,
+    950
+  ],
+  "notes": [
+    "Lease became running and consumed the remaining budget automatically.",
+    "SSH endpoint for this lease repeatedly returned connection refused from this environment.",
+    "Primary objective of this node was budget exhaustion, which completed successfully."
+  ]
+}

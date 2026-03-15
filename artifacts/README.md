@@ -23,5 +23,9 @@ Generated on 2026-03-15 using Flywheel-provisioned compute (`modal::modal_a10g`,
 - `rank_ablation_large.json`
 - `rank_ablation_large.log`
 - `plots/rank_ablation_large.png`
+- `budget_burn_trace.json`
+- `budget_burn_summary.md`
 
-Total Flywheel cumulative spend across runs in this graph: **9 cents**.
+Total Flywheel cumulative spend across runs in this graph: **950 cents (fully exhausted)**.
+
+Budget-exhaustive node note: the high-cost vastai lease reached cap and auto-terminated; SSH to that host was connection-refused from this environment, so the node stores lease/budget accounting artifacts.
