@@ -1,0 +1,176 @@
+{
+  "paper": "arXiv:2603.10145",
+  "experiment": "larger_scale_rank_ablation",
+  "config": {
+    "ranks": [
+      16,
+      32,
+      64,
+      96
+    ],
+    "seeds": [
+      21,
+      22,
+      23
+    ],
+    "vocab_size": 1024,
+    "hidden_dim": 96,
+    "seq_len": 32,
+    "batch_size": 128,
+    "steps": 900,
+    "eval_batches": 24,
+    "lr": 0.002
+  },
+  "summary_by_rank": [
+    {
+      "head_rank": 16,
+      "num_seeds": 3,
+      "final_loss_mean": 2.557685057322184,
+      "final_loss_std": 0.039433803603938604,
+      "tail_mean_loss_mean": 2.516627266671923,
+      "tail_mean_loss_std": 0.0035163244739358584,
+      "eval_acc_mean": 0.7001987033420138,
+      "eval_acc_std": 0.0007394679352105175
+    },
+    {
+      "head_rank": 32,
+      "num_seeds": 3,
+      "final_loss_mean": 2.5583511193593345,
+      "final_loss_std": 0.0405304791329683,
+      "tail_mean_loss_mean": 2.517419830958048,
+      "tail_mean_loss_std": 0.0034240473755114903,
+      "eval_acc_mean": 0.7001987033420138,
+      "eval_acc_std": 0.0007394679352105175
+    },
+    {
+      "head_rank": 64,
+      "num_seeds": 3,
+      "final_loss_mean": 2.5590818723042807,
+      "final_loss_std": 0.038133014995091315,
+      "tail_mean_loss_mean": 2.519493700839855,
+      "tail_mean_loss_std": 0.00332513405927118,
+      "eval_acc_mean": 0.7001987033420138,
+      "eval_acc_std": 0.0007394679352105175
+    },
+    {
+      "head_rank": 96,
+      "num_seeds": 3,
+      "final_loss_mean": 2.5601937770843506,
+      "final_loss_std": 0.04050533790023524,
+      "tail_mean_loss_mean": 2.5212913866396303,
+      "tail_mean_loss_std": 0.0027926854750455325,
+      "eval_acc_mean": 0.7001987033420138,
+      "eval_acc_std": 0.0007394679352105175
+    }
+  ],
+  "per_run_metrics": [
+    {
+      "final_loss": 2.554424285888672,
+      "tail_mean_loss": 2.5214525090323554,
+      "eval_loss": 2.5123859345912933,
+      "eval_acc": 0.7005615234375,
+      "head_rank": 16,
+      "seed": 21
+    },
+    {
+      "final_loss": 2.511101722717285,
+      "tail_mean_loss": 2.515256079037984,
+      "eval_loss": 2.5136268635590873,
+      "eval_acc": 0.70086669921875,
+      "head_rank": 16,
+      "seed": 22
+    },
+    {
+      "final_loss": 2.6075291633605957,
+      "tail_mean_loss": 2.513173211945428,
+      "eval_loss": 2.523303965727488,
+      "eval_acc": 0.6991678873697916,
+      "head_rank": 16,
+      "seed": 23
+    },
+    {
+      "final_loss": 2.5582849979400635,
+      "tail_mean_loss": 2.522256220711602,
+      "eval_loss": 2.5152779122193656,
+      "eval_acc": 0.7005615234375,
+      "head_rank": 32,
+      "seed": 21
+    },
+    {
+      "final_loss": 2.508744716644287,
+      "tail_mean_loss": 2.515209364891052,
+      "eval_loss": 2.5124397377173104,
+      "eval_acc": 0.70086669921875,
+      "head_rank": 32,
+      "seed": 22
+    },
+    {
+      "final_loss": 2.6080236434936523,
+      "tail_mean_loss": 2.5147939072714913,
+      "eval_loss": 2.5242074529329934,
+      "eval_acc": 0.6991678873697916,
+      "head_rank": 32,
+      "seed": 23
+    },
+    {
+      "final_loss": 2.555483818054199,
+      "tail_mean_loss": 2.5241363525390623,
+      "eval_loss": 2.5149934788544974,
+      "eval_acc": 0.7005615234375,
+      "head_rank": 64,
+      "seed": 21
+    },
+    {
+      "final_loss": 2.514281749725342,
+      "tail_mean_loss": 2.5178197648790146,
+      "eval_loss": 2.5150124529997506,
+      "eval_acc": 0.70086669921875,
+      "head_rank": 64,
+      "seed": 22
+    },
+    {
+      "final_loss": 2.607480049133301,
+      "tail_mean_loss": 2.516524985101488,
+      "eval_loss": 2.5275295277436576,
+      "eval_acc": 0.6991678873697916,
+      "head_rank": 64,
+      "seed": 23
+    },
+    {
+      "final_loss": 2.556502342224121,
+      "tail_mean_loss": 2.5252024200227527,
+      "eval_loss": 2.5172277092933655,
+      "eval_acc": 0.7005615234375,
+      "head_rank": 96,
+      "seed": 21
+    },
+    {
+      "final_loss": 2.5125339031219482,
+      "tail_mean_loss": 2.5198117918438383,
+      "eval_loss": 2.5174483557542167,
+      "eval_acc": 0.70086669921875,
+      "head_rank": 96,
+      "seed": 22
+    },
+    {
+      "final_loss": 2.6115450859069824,
+      "tail_mean_loss": 2.5188599480523,
+      "eval_loss": 2.529682606458664,
+      "eval_acc": 0.6991678873697916,
+      "head_rank": 96,
+      "seed": 23
+    }
+  ],
+  "plot": "artifacts/plots/rank_ablation_large.png",
+  "notes": [
+    "Controls effective LM-head rank via factorized output head with fixed hidden size.",
+    "Expected trend: higher rank should reduce loss and improve accuracy."
+  ],
+  "run_meta": {
+    "started_at_unix": 1773534876.4787407,
+    "ended_at_unix": 1773534902.6369994,
+    "duration_sec": 26.15825867652893,
+    "device": "cuda",
+    "seed": 21
+  }
+}
