@@ -5,6 +5,7 @@
     "infrastructure": "37f70f30-3aa9-5dcb-acb2-efe69ed3c6d8",
     "gradient_suppression": "324ce0d6-3e2e-5d7d-8d84-0003f92b8622",
     "head_rank_optimization": "1cdfca83-8b12-5c5f-a2e8-6b0810027ed8",
-    "head_rank_large_ablation": "0d7c3c40-de21-5d29-bb3a-090e04f82965"
+    "head_rank_large_ablation": "0d7c3c40-de21-5d29-bb3a-090e04f82965",
+    "budget_stress_sweep": "496a6cf0-7be5-5da2-a130-659eebb5f640"
   }
 }
