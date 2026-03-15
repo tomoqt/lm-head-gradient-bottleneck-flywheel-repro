@@ -80,8 +80,8 @@ def main() -> None:
 
     W = get_lm_head_weight(model).to(device=device, dtype=torch.float32)  # [V, d]
 
-    # Build an orthonormal basis for col(W), enabling fast projection g -> QQ^T g.
-    Q = torch.linalg.qr(W, mode="reduced").Q  # [V, r]
+    # QR on MPS is not implemented yet, so build basis on CPU and move back.
+    Q = torch.linalg.qr(W.cpu(), mode="reduced").Q.to(device)  # [V, r]
 
     suppressed: List[float] = []
     kept: List[float] = []
