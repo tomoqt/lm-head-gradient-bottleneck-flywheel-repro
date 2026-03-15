@@ -1,0 +1,19 @@
+budget:
+  hard_cap_usd: 10.0
+  target_cap_usd: 9.5
+
+experiments:
+  gradient_suppression:
+    model: gpt2
+    max_batches: 24
+    batch_size: 4
+    seq_len: 96
+    sample_tokens_per_batch: 96
+
+  spamlang:
+    vocab_sizes: [256, 512, 1024]
+    hidden_dim: 96
+    seq_len: 32
+    steps: 700
+    batch_size: 128
+    lr: 0.002

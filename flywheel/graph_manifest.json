@@ -1,0 +1,9 @@
+{
+  "root_node_id": "8087ccba-da33-503c-a49b-ded901f15d12",
+  "nodes": {
+    "plan": "024032c4-b783-50b9-8448-e17d56064c93",
+    "infrastructure": "37f70f30-3aa9-5dcb-acb2-efe69ed3c6d8",
+    "gradient_suppression": "324ce0d6-3e2e-5d7d-8d84-0003f92b8622",
+    "head_rank_optimization": "1cdfca83-8b12-5c5f-a2e8-6b0810027ed8"
+  }
+}

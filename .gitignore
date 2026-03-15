@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+artifacts/raw/*.pt
+artifacts/raw/*.bin
+artifacts/raw/*.npy
+artifacts/raw/*.pkl
+artifacts/*.log
+.DS_Store
