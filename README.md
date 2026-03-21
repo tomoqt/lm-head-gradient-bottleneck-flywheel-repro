@@ -52,7 +52,7 @@ Artifacts:
 
 ## Flywheel Graph
 
-Node IDs are in `flywheel/graph_manifest.json`.
+Node IDs are in `flywheel/graph_manifest.json` for production and `flywheel/staging_graph_manifest.json` for Flywheel staging.
 
 Workflow:
 

@@ -1,0 +1,11 @@
+{
+  "root_node_id": "2cf87536-3c75-57be-b5f0-79a1aad6c90f",
+  "nodes": {
+    "plan": "659e8788-9812-563f-be4f-112ba6cbdf5b",
+    "infrastructure": "f92d7d28-f45e-5573-ae20-12d95c676620",
+    "gradient_suppression": "cf8e6183-cf95-5857-910f-d375128ed9e3",
+    "head_rank_optimization": "7552da26-ef30-52e3-95b7-026e829bcf0d",
+    "head_rank_large_ablation": "b323794f-45fd-58e1-a28e-694c85180ecb",
+    "budget_stress_sweep": "b11cfa16-c3a2-59ac-883a-a1460788bde0"
+  }
+}
